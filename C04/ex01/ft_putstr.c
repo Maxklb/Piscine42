@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maxklb <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 15:56:26 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/16 18:21:42 by maxklb           ###   ########.fr       */
+/*   Created: 2022/07/16 18:17:42 by maxklb            #+#    #+#             */
+/*   Updated: 2022/07/16 18:17:49 by maxklb           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strlowcase(char *str)
+void	ft_putstr(char *str)
 {
-	int	index;
-
-	index = 0;
-	while (str[index] != '\0')
-	{
-		if (str[index] >= 'A' && str[index] <= 'Z')
-		{
-			str[index] = str[index] + 32;
-		}
-		index++;
-	}
-	return (str);
+	while (*str != '\0')
+		write(1, str++, 1);
 }

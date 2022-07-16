@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   fr_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 15:56:26 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/16 18:21:42 by maxklb           ###   ########.fr       */
+/*   Created: 2022/07/13 13:20:48 by mkoch-le          #+#    #+#             */
+/*   Updated: 2022/07/16 18:20:37 by maxklb           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strlowcase(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	int	index;
 
 	index = 0;
 	while (str[index] != '\0')
 	{
-		if (str[index] >= 'A' && str[index] <= 'Z')
+		if (!(str[index] >= '0' && str[index] <= '9'))
 		{
-			str[index] = str[index] + 32;
+			return (0);
 		}
 		index++;
 	}
-	return (str);
+	return (1);
 }

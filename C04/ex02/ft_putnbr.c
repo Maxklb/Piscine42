@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fr_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: maxklb <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 13:20:48 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/15 13:00:24 by mkoch-le         ###   ########.fr       */
+/*   Created: 2022/07/16 18:19:59 by maxklb            #+#    #+#             */
+/*   Updated: 2022/07/16 18:20:04 by maxklb           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_numeric(char *str)
+void	ft_putchar(char c)
 {
-	int	index;
+	write(1, &c, 1);
+}
 
-	index = 0;
-	while (str[index] != '\0')
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		if (!(str[index] >= '0' && str[index] <= '9'))
-		{
-			return (0);
-		}
-		index++;
+		ft_putnbr(nb / 10);
+		ft_putchar('8');
 	}
-	return (1);
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(-nb);
+	}
+	else
+	{
+		if (nb > 9)
+		{
+			ft_putnbr(nb / 10);
+		}
+		ft_putchar(48 + nb % 10);
+	}
 }
