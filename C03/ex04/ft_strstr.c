@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 14:02:37 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/17 14:30:44 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/17 19:51:52 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ char	*ft_strstr(char *str, char *to_find)
 	needle = to_find;
 	haystack = str;
 	if (*haystack = *needle)
-		needle++;		
+		needle++;
+}

@@ -6,13 +6,13 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:01:52 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/16 21:13:06 by maxklb           ###   ########.fr       */
+/*   Updated: 2022/07/17 19:53:10 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	char	*x;
 
