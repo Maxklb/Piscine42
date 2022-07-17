@@ -1,25 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 14:02:37 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/17 14:30:44 by mkoch-le         ###   ########.fr       */
+/*   Created: 2022/07/17 14:59:14 by mkoch-le          #+#    #+#             */
+/*   Updated: 2022/07/17 15:01:51 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strstr(char *str, char *to_find)
-{
-	char	*needle;
-	char	*haystack;
 
-	if (*to_find = '\0')
-		return (str);
-	needle = to_find;
-	haystack = str;
-	if (*haystack = *needle)
-		needle++;		
