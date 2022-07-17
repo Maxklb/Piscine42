@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 14:02:37 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/17 19:51:52 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/17 20:27:17 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	char	*needle;
-	char	*haystack;
+	int	index;
 
-	if (*to_find = '\0')
+	if (!*to_find)
 		return (str);
-	needle = to_find;
-	haystack = str;
-	if (*haystack = *needle)
-		needle++;
+	while (*str)
+	{
+		if (*str == *to_find)
+		{
+			
+		}
+		str++
+	}
+	return (0);
 }
