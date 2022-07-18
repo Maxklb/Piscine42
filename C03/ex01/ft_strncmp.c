@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 14:09:14 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/16 11:56:21 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/18 19:02:29 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	index;
-
-	index = 0;
 	while (*s1 != '\0' && *s1 == *s2 && n > 0)
 	{
 		if (*s1 != *s2)
