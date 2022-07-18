@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 12:13:19 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/18 12:27:19 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/18 14:57:11 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,11 @@ int	ft_strlen(char *str)
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	
+	unsigned int	length;
+	unsigned int	index;
+
+	index = 0;
+	while (index + 1 < size && str[index] != '\0')
+	{
+		
+		index++
