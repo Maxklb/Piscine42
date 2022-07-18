@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 14:02:37 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/18 12:11:10 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/18 12:13:05 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strstr(char *str, char *to_find)
 			while (to_find[index] && str[index] == to_find[index])
 				index++;
 			if (!to_find[index])
-				return (str);	
+				return (str);
 		}
 		str++;
 	}
