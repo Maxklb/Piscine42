@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 12:04:20 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/19 10:46:30 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/19 17:54:37 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,23 @@ void	ft_putnbr(int nb)
 		}
 		ft_putchar(48 + nb % 10);
 	}
+}
+
+void	is_base_valid(char *str)
+{
+	if ()
+
+
+
+
+void ft_putnbr_base(int nbr, char *base)
+{
+	
+}
+
+
+int main ()
+{
+	ft_putnbr();
+	return(0);
 }
