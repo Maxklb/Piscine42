@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 12:04:20 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/19 17:54:37 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/20 16:11:26 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,18 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+int	ft_strlen(char *str)
+{
+	int	a;
+
+	a = 0;
+	while (str[a] != '\0')
+	{
+		a++;
+	}
+	return (a);
 }
 
 void	ft_putnbr(int nb)
@@ -39,16 +51,37 @@ void	ft_putnbr(int nb)
 	}
 }
 
-void	is_base_valid(char *str)
+int	is_base_valid(char *caca)
 {
-	if ()
+	int	i;
+	int	j;
 
-
+	if (ft_strlen(caca) < 2)
+		return (0);
+	i = 0;
+	while (caca[i] != '\0')
+	{
+		if (caca[i] = '+' || caca[i] = '-')
+			return (0);
+		j = i - 1;
+		while (j <= 0)
+		{
+			if (caca[i] == caca[j])
+				return (0);
+			j--;
+		}
+		i++;
+	}
+	return (1);
+}
 
 
 void ft_putnbr_base(int nbr, char *base)
 {
-	
+	if (is_base_valid(base) == 1)
+	{
+			
+	}
 }
 
 
