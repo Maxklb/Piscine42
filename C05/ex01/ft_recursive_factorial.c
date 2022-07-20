@@ -6,13 +6,13 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:45:25 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/19 18:57:04 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/20 11:38:10 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_recursive_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	if (nb < 1)
 		return (!nb);
