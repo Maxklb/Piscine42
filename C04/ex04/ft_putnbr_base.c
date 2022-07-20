@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 12:04:20 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/20 16:11:26 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/20 17:12:24 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,9 @@ int	is_base_valid(char *caca)
 
 void ft_putnbr_base(int nbr, char *base)
 {
-	if (is_base_valid(base) == 1)
-	{
-			
-	}
+	if (!is_base_valid(base))
+		return(0);
+	i
 }
 
 
