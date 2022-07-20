@@ -6,11 +6,11 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 15:06:37 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/20 15:28:13 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/20 15:28:58 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_power(int nb, int power)
+int	ft_recursive_power(int nb, int power)
 {
 	if (power < 0)
 		return (0);
