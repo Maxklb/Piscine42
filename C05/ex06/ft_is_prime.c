@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 19:11:05 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/21 14:06:36 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/21 16:48:58 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_is_prime(int nb)
 		return (0);
 	if (nb >= 2)
 	{
-		while (i *i < nb)
+		while (i * i < nb)
 		{
 			if (nb % i == 0)
 				return (0);
