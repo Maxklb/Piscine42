@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 12:04:20 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/21 16:31:54 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/21 17:55:01 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int	ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-	int	a;
+	unsigned int	a;
 
 	a = 0;
 	while (str[a] != '\0')
@@ -31,7 +31,7 @@ int	ft_strlen(char *str)
 
 void	ft_putnbr(unsigned int nb, char *base)
 {
-	int	len_base;
+	unsigned int	len_base;
 
 	len_base = ft_strlen(base);
 	if (nb < len_base)
