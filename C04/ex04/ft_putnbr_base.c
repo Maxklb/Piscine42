@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 12:04:20 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/20 17:12:24 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/21 15:48:04 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,18 @@ int	ft_strlen(char *str)
 	return (a);
 }
 
-void	ft_putnbr(int nb)
+void	ft_putnbr(unsigned int nb, char *base)
 {
-	if (nb == -2147483648)
+	int	len_base;
+
+	len_base = ft_strlen(base);
+	if (nb < len_base)
 	{
-		ft_putnbr(nb / 10);
-		ft_putchar('8');
+		write(1, &base[nb], 1);
+		return ;
 	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-nb);
-	}
-	else
-	{
-		if (nb > 9)
-		{
-			ft_putnbr(nb / 10);
-		}
-		ft_putchar(48 + nb % 10);
-	}
+	ft_putnbr(nb / len_base, base);
+	ft_putnbr(nb % len_base, base);
 }
 
 int	is_base_valid(char *caca)
@@ -58,13 +50,13 @@ int	is_base_valid(char *caca)
 
 	if (ft_strlen(caca) < 2)
 		return (0);
-	i = 0;
+	i = 1;
 	while (caca[i] != '\0')
 	{
-		if (caca[i] = '+' || caca[i] = '-')
+		if (caca[i] == '+' || caca[i] == '-')
 			return (0);
 		j = i - 1;
-		while (j <= 0)
+		while (j >= 0)
 		{
 			if (caca[i] == caca[j])
 				return (0);
@@ -78,14 +70,23 @@ int	is_base_valid(char *caca)
 
 void ft_putnbr_base(int nbr, char *base)
 {
+	unsigned int	number;
+
 	if (!is_base_valid(base))
-		return(0);
-	i
+		return (0);
+	if (nbr < 0)
+	{
+		write (1, "-",1);
+		number = -nbr;
+	}
+	else
+		number = nbr;
+	ft_putnbr(number, base);
 }
 
 
 int main ()
 {
-	ft_putnbr();
+	ft_putnbr_base(42, "charhexa");
 	return(0);
 }
