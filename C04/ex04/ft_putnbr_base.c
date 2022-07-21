@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 12:04:20 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/21 15:54:54 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/21 16:31:54 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,7 @@ int	is_base_valid(char *caca)
 	return (1);
 }
 
-
-void ft_putnbr_base(int nbr, char *base)
+void	ft_putnbr_base(int nbr, char *base)
 {
 	unsigned int	number;
 
@@ -76,17 +75,10 @@ void ft_putnbr_base(int nbr, char *base)
 		return ;
 	if (nbr < 0)
 	{
-		write (1, "-",1);
+		write (1, "-", 1);
 		number = -nbr;
 	}
 	else
 		number = nbr;
 	ft_putnbr(number, base);
-}
-
-
-int main (void)
-{
-	ft_putnbr_base(42, "0123456789ABCDEF");
-	return(0);
 }
