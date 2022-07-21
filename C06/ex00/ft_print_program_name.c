@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 12:16:55 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/17 14:56:26 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/21 17:08:24 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putchar(char *str)
 	}
 }
 
-int main (int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	ft_putchar(argv[0]);
 }

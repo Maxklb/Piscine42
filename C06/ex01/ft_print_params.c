@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 14:59:14 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/17 15:10:13 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/21 17:06:26 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_putchar2(char c)
 	write (1, &c, 1);
 }
 
-int main (int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	int	x;
 
