@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 19:03:53 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/20 11:23:38 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/23 19:02:39 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ int	ft_iterative_power(int nb, int power)
 		}
 		return (nb);
 	}
+	return (0);
 }
