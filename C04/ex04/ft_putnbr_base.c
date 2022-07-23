@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 12:04:20 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/22 13:30:43 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/23 15:38:17 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,24 +43,25 @@ void	ft_putnbr(unsigned int nb, char *base)
 	ft_putnbr(nb % len_base, base);
 }
 
-int	is_base_valid(char *caca)
+int	is_base_valid(char *pouet)
 {
 	int	i;
 	int	j;
 
-	if (ft_strlen(caca) < 2)
+	if (ft_strlen(pouet) < 2)
 		return (0);
-	i = 1;
-	while (caca[i] != '\0')
+	i = 0;
+	while (pouet[i] != '\0')
 	{
-		if (caca[i] == '+' || caca[i] == '-')
+		if (pouet[i] == '+' || pouet[i] == '-'
+			|| (pouet[i] < 32 || pouet[i] == 127))
 			return (0);
-		j = i - 1;
-		while (j >= 0)
+		j = i + 1;
+		while (pouet[j] != '\0')
 		{
-			if (caca[i] == caca[j])
+			if (pouet[i] == pouet[j])
 				return (0);
-			j--;
+			j++;
 		}
 		i++;
 	}
@@ -81,26 +82,4 @@ void	ft_putnbr_base(int nbr, char *base)
 	else
 		number = nbr;
 	ft_putnbr(number, base);
-}
-
-#include <unistd.h>
-
-void	ft_putnbr_base(int nbr, char *base);
-
-int		main(void)
-{
-	write(1, "42:", 3);
-	ft_putnbr_base(42, "0123456789");
-	write(1, "\n2a:", 4);
-	ft_putnbr_base(42, "0123456789abcdef");
-	write(1, "\n-2a:", 5);
-	ft_putnbr_base(-42, "0123456789abcdef");
-	write(1, "\n:", 2);
-	ft_putnbr_base(42, "");
-	write(1, "\n:", 2);
-	ft_putnbr_base(42, "0");
-	write(1, "\n:", 2);
-	ft_putnbr_base(42, "+-0123456789abcdef");
-	write(1, "\n:", 2);
-	ft_putnbr_base(42, "\t0123456789abcdef");
 }
