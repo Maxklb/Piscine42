@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 13:38:25 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/23 16:16:01 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/23 18:52:09 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_is_prime(int nb)
 	i = 2;
 	if (nb < 2)
 		return (0);
-	while (i * i < nb)
+	while (i * i <= (unsigned int)nb)
 	{
 		if (nb % i == 0)
 			return (0);
@@ -30,14 +30,13 @@ int	ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
-	ft_is_prime(nb);
-	if (nb == 1)
-		return (nb);
-	if (nb == 0)	
+	if (nb < 2)
+		return (2);
+	while (nb >= 2)
 	{
-		while(nb != 1 )
-		{
-			nb++;
-		}
+		if (ft_is_prime(nb))
+			return (nb);
+		nb++;
 	}
+	return (0);
 }
