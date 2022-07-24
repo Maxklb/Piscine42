@@ -6,10 +6,12 @@
 #    By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/24 17:34:07 by mkoch-le          #+#    #+#              #
-#    Updated: 2022/07/24 17:34:41 by mkoch-le         ###   ########.fr        #
+#    Updated: 2022/07/24 18:15:25 by mkoch-le         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = rush-02
+NAME = rush02
 
 SRC = *.c
+
+$(NAME): gcc -Wall -Werror -Wextra -o
