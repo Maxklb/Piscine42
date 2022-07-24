@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 19:06:44 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/24 20:55:51 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/24 21:08:45 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,21 @@ int	ft_check_input_args(int ac, char **av, int *input)
 		return (-1);
 	}
 	return (*input);
+}
+
+int	ft_str_is_numeric(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if ((str[i] >= '0' && str[i] <= '9') || str[i] == '\0')
+		{
+			i++;
+		}
+		else
+			return (0);
+	}
+	return (1);
 }
