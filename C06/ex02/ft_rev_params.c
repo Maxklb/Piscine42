@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 15:37:53 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/23 11:11:25 by maxklb           ###   ########.fr       */
+/*   Updated: 2022/07/24 04:53:34 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_putstr(char *str)
 	while (*str)
 		ft_putchar(*str++);
 }
+
 int	main(int argc, char **argv)
 {
 	while (argc > 1)
