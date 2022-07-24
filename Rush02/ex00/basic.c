@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 17:39:53 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/24 19:31:11 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/24 20:56:35 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,16 @@ int	ft_strlen(char *str)
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+int	ft_putnbr(int nb)
+{
+	int 	value1;
+	int	value2;
+
+	if ( nb > 9 )
+	{
+		value1 = (nb / 10) * 10;
+		value2 = (nb % 10);
+	}
 }

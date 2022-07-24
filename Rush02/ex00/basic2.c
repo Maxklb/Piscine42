@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 19:06:44 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/24 19:42:53 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/24 20:55:51 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,15 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	*div = a / b;
 	*mod = a % b;
+}
+
+int	ft_check_input_args(int ac, char **av, int *input)
+{
+	*input = (ft_atoi(av));
+	if ((ac < 2 && ac > 3) || (*input < 0))
+	{
+		write(1, "error", 5);
+		return (-1);
+	}
+	return (*input);
 }
