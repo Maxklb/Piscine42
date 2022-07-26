@@ -6,7 +6,7 @@
 /*   By: maxklb <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 22:22:48 by maxklb            #+#    #+#             */
-/*   Updated: 2022/07/26 22:48:13 by maxklb           ###   ########.fr       */
+/*   Updated: 2022/07/26 23:32:02 by maxklb           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,21 @@ char	*ft_strdup(char *src)
 
 struct	s_stock_str	*ft_strs_to_tab(int argc, char **argv)
 {
+	t_stock_str		*dest;
+	int		index;
 
+	if (argc < 0)
+		argc = 0;
+	dest = malloc((argc + 1) * sizeof(t_stock_str));
+	if (dest == NULL)
+		return (NULL);
+	index = 0;
+	while (index < argc)
+	{
+		dest[index].size = ft_strlen(argv[index]);
+		dest[index].str = argv[index];
+		dest[index].copy = ft_strdup(argv[index]);
+	}
+	dest[index].str = 0;
+	return (dest);
 }
