@@ -6,8 +6,13 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 13:23:58 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/25 13:24:07 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/26 18:59:43 by maxklb           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
+# define ABS(Value) (Value < 0) ? -Value : Value
+
+#endif
