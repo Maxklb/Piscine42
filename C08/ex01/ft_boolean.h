@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 13:05:25 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/25 13:13:59 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/27 12:41:09 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 
-typedef char t_bool;
+typedef char	t_bool;
 # define TRUE 1
 # define FALSE 0
 
