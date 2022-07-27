@@ -6,7 +6,7 @@
 /*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 09:18:37 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/27 12:42:44 by mkoch-le         ###   ########.fr       */
+/*   Updated: 2022/07/27 15:02:35 by mkoch-le         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ void	ft_putnbr(int nb)
 
 void	ft_show_tab(struct s_stock_str *par)
 {
-	if (par == NULL)
-		return (NULL);
 	while (par -> str)
 	{
 		ft_putstr(par -> str);
