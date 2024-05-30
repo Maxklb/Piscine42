@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/25 13:05:25 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/27 12:46:11 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/17 11:42:01 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/20 16:23:15 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 
 # include <unistd.h>
 
+# define EVEN_MSG	"I have an even number of arguments.\n"
+# define ODD_MSG	"I have an odd number of arguments.\n"
+
+# define TRUE	1
+# define FALSE	0
+
+# define EVEN(x)	x % 2 == 0
+# define SUCCESS	0
+
 typedef char	t_bool;
-# define TRUE 1
-# define FALSE 0
-
-# define SUCCESS 0
-# define EVEN_MSG "I have an even number of arguments.\n"
-# define ODD_MSG "I have an odd number of arguments.\n"
-
-# define EVEN(X) ((X % 2) ? 0 : 1)
 
 #endif

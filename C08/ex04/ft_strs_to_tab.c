@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxklb <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/26 22:22:48 by maxklb            #+#    #+#             */
-/*   Updated: 2022/07/27 12:36:39 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/17 13:52:17 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/20 14:10:27 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@ int	ft_strlen(char *str)
 	int	index;
 
 	index = 0;
-	while (str[index])
+	while (str && str[index] != '\0')
 		index++;
 	return (index);
 }
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int		index;
+	int	index;
 
 	index = 0;
-	while (src[index])
+	while (src[index] != '\0')
 	{
 		dest[index] = src[index];
 		index++;
@@ -48,22 +48,22 @@ char	*ft_strdup(char *src)
 	return (dest);
 }
 
-struct	s_stock_str	*ft_strs_to_tab(int argc, char **argv)
+struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	t_stock_str		*dest;
-	int				index;
+	int			index;
+	t_stock_str	*dest;
 
-	if (argc < 0)
-		argc = 0;
-	dest = malloc((argc + 1) * sizeof(t_stock_str));
+	if (ac < 0)
+		ac = 0;
+	dest = malloc(sizeof(t_stock_str) * (ac + 1));
 	if (dest == NULL)
 		return (NULL);
 	index = 0;
-	while (index < argc)
+	while (av[index] && index < ac)
 	{
-		dest[index].size = ft_strlen(argv[index]);
-		dest[index].str = argv[index];
-		dest[index].copy = ft_strdup(argv[index]);
+		dest[index].size = ft_strlen(av[index]);
+		dest[index].str = av[index];
+		dest[index].copy = ft_strdup(av[index]);
 		index++;
 	}
 	dest[index].str = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 14:59:14 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/21 17:06:26 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/11 10:38:25 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/15 19:41:02 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,15 @@ void	ft_putchar2(char c)
 	write (1, &c, 1);
 }
 
-int	main(int argc, char *argv[])
+int	main(int argc, char **argv)
 {
-	int	x;
+	int	index;
 
-	x = 1;
-	while (x < argc)
+	index = 1;
+	while (index < argc)
 	{
-		ft_putchar(argv[x]);
-		x++;
+		ft_putchar(argv[index]);
+		index++;
 		ft_putchar2('\n');
 	}
 }

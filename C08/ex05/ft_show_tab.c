@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_show_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/27 09:18:37 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/27 15:02:35 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/17 15:19:11 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/20 16:38:08 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,6 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
-	while (*str)
-		write(1, str++, 1);
 }
 
 void	ft_putnbr(int nb)
@@ -41,6 +35,12 @@ void	ft_putnbr(int nb)
 		n %= 10;
 	}
 	ft_putchar(n + '0');
+}
+
+void	ft_putstr(char *str)
+{
+	while (*str)
+		write(1, str++, 1);
 }
 
 void	ft_show_tab(struct s_stock_str *par)

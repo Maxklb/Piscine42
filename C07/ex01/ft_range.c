@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/25 16:36:32 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/26 18:28:14 by maxklb           ###   ########.fr       */
+/*   Created: 2023/08/16 12:08:36 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/21 14:06:04 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,17 @@
 
 int	*ft_range(int min, int max)
 {
-	int	*temp;
-	int	index;
+	size_t	len;
+	int	*tab;
 
-	if (min >= max)
+	len = ((size_t)max - min + 1);
+	tab = malloc(sizeof *tab * len);
+	if (min => max)
 		return (NULL);
-	max = max - min;
-	temp = malloc(max * sizeof(int));
-	if (temp == NULL)
-		return (NULL);
-	index = 0;
-	while (index < max)
+	while (min < max)
 	{
-		temp[index] = min + index;
-		index++;
+		*tab = min;
+		min++;
 	}
-	return (temp);
+	return (tab);
 }

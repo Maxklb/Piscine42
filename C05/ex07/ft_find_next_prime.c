@@ -3,27 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 13:38:25 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/23 18:53:07 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/13 12:02:09 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/13 13:22:09 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 int	ft_is_prime(int nb)
 {
-	unsigned int	i;
+	unsigned int	n;
 
-	i = 2;
+	n = 2;
 	if (nb < 2)
 		return (0);
-	while (i * i <= (unsigned int)nb)
+	while (n * n <= (unsigned int)nb)
 	{
-		if (nb % i == 0)
+		if (nb % n == 0)
 			return (0);
-		i++;
+		n++;
 	}
 	return (1);
 }
@@ -40,3 +38,15 @@ int	ft_find_next_prime(int nb)
 	}
 	return (0);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	printf("%s\n%s\n%s\n%s\n",
+		ft_find_next_prime(-3) == 2 ? "OK" : "Fail",
+		ft_find_next_prime(5) == 5 ? "OK" : "Fail",
+		ft_find_next_prime(10) == 11 ? "OK" : "Fail",
+		ft_find_next_prime(20) == 23 ? "OK" : "Fail"
+		  );
+}*/

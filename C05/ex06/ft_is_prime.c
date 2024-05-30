@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 19:11:05 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/23 18:55:34 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/12 18:50:39 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/13 13:22:42 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
-	unsigned int	i;
+	unsigned int	n;
 
-	i = 2;
+	n = 2;
 	if (nb < 2)
 		return (0);
-	while (i * i <= (unsigned int)nb)
+	while (n * n <= (unsigned int)nb)
 	{
-		if (nb % i == 0)
+		if (nb % n == 0)
 			return (0);
-		i++;
+		n++;
 	}
 	return (1);
 }

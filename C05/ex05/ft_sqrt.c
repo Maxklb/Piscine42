@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 17:41:07 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/23 18:58:36 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/12 17:32:36 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/12 18:50:11 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_sqrt(int nb)
 {
@@ -20,9 +18,7 @@ int	ft_sqrt(int nb)
 	if (nb < 1)
 		return (0);
 	while (n * n < (unsigned int)nb)
-	{
 		n++;
-	}
 	if (n * n > (unsigned int)nb)
 		return (0);
 	return (n);

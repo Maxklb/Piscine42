@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/19 18:45:25 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/23 19:03:32 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/12 16:08:45 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/12 16:11:07 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_recursive_factorial(int nb)
 {

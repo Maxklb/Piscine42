@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 15:37:53 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/24 04:53:34 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/11 10:46:53 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/15 13:30:41 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	write (1, &c, 1);
 }
 
 void	ft_putstr(char *str)
@@ -23,7 +23,7 @@ void	ft_putstr(char *str)
 		ft_putchar(*str++);
 }
 
-int	main(int argc, char **argv)
+int	main(int argc, char *argv[])
 {
 	while (argc > 1)
 	{

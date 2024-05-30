@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 16:34:59 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/21 16:35:02 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/08 18:14:21 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/10 16:01:36 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 int	ft_strlen(char *str)
 {
-	int	a;
+	int	index;
 
-	a = 0;
-	while (str[a] != '\0')
-	{
-		a++;
-	}
-	return (a);
+	index = 0;
+	while (str[index] != '\0')
+		index++;
+	return (index);
 }
