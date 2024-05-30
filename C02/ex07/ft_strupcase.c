@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 15:47:46 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/16 18:21:28 by maxklb           ###   ########.fr       */
+/*   Created: 2023/08/07 17:14:15 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/07 17:50:35 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ char	*ft_strupcase(char *str)
 	while (str[index] != '\0')
 	{
 		if (str[index] >= 'a' && str[index] <= 'z')
-		{
 			str[index] = str[index] - 32;
-		}
 		index++;
 	}
 	return (str);
-}		
+}

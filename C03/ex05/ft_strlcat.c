@@ -3,41 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/18 12:13:19 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/18 15:59:54 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/14 14:06:17 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/14 17:13:28 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 int	ft_strlen(char *str)
 {
-	int	a;
+	int	index;
 
-	a = 0;
-	while (str[a] != '\0')
-	{
-		a++;
-	}
-	return (a);
+	index = 0;
+	while (str[index] != '\0')
+		index++;
+	return (index);
 }
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int	length;
-	unsigned int	index;
+	unsigned int	tmp;
+	unsigned int	j;
+	unsigned int	i;
 
-	length = ft_strlen(dest);
-	index = 0;
-	while (length + index + 1 < size && src[index] != '\0')
+	i = 0;
+	j = ft_strlen(src);
+	tmp = ft_strlen(dest);
+	if ((tmp > size) || (size < 1))
+		return (size + j);
+	while (src[i] && (tmp + i) < size - 1)
 	{
-		dest[length + index] = src[index];
-		index++;
+		dest[tmp + i] = src[i];
+		i++;
 	}
-	dest[length + index] = '\0';
-	if (length <= size)
-		return (length + ft_strlen(src));
-	return (size + ft_strlen(src));
+	dest[tmp + i] = '\0';
+	return (tmp + j);
 }

@@ -3,23 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 12:06:27 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/15 09:13:59 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/07 14:51:24 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/09 19:07:30 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_str_is_alpha(char *str)
 {
 	while (*str != '\0')
 	{
-		if (!((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z')))
-		{
+		if ((*str < 'a' || *str > 'z') && (*str < 'A' || *str > 'Z'))
 			return (0);
-		}
 		str++;
 	}
 	return (1);

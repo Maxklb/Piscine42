@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 11:26:02 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/15 09:12:35 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/06 17:52:47 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/07 14:30:09 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {

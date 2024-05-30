@@ -3,31 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/11 11:37:40 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/11 13:24:33 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/06 16:52:57 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/06 17:26:28 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_swap(int *a, int *b)
+{
+	int	c;
+
+	c = *a;
+	*a = *b;
+	*b = c;
+}
+
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int	buffer;
-	int	count_forward;
+	int	index;
 
-	count_forward = 0;
-	while (count_forward < (size - 1))
+	index = 0;
+	while (index < size - 1)
 	{
-		if (tab[count_forward] > tab[count_forward + 1])
+		if (tab[index] > tab[index + 1])
 		{
-			buffer = tab[count_forward];
-			tab[count_forward] = tab[count_forward + 1];
-			tab[count_forward + 1] = buffer;
-			count_forward = 0;
+			ft_swap(&tab[index], &tab[index + 1]);
+			index = -1;
 		}
-		else
-			count_forward++;
+		index++;
 	}
 }

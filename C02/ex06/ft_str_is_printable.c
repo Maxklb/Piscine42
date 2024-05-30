@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 13:50:51 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/15 13:14:44 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/07 15:11:06 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/09 19:08:50 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_str_is_printable(char *str)
 {
@@ -20,9 +18,7 @@ int	ft_str_is_printable(char *str)
 	while (str[index] != '\0')
 	{
 		if (str[index] < 32 || str[index] > 126)
-		{
 			return (0);
-		}
 		index++;
 	}
 	return (1);

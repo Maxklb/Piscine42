@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxklb <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/10 10:54:38 by maxklb            #+#    #+#             */
-/*   Updated: 2022/07/13 15:36:51 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/03 16:08:51 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/03 16:09:45 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate(int *********nbr)
+#include <unistd.h>
+
+void	ft_ultimate_ft(int *********nbr)
 {
 	*********nbr = 42;
 }

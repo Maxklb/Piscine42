@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 13:39:34 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/15 13:13:50 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/07 15:08:55 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/09 15:54:15 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,11 @@
 
 int	ft_str_is_lowercase(char *str)
 {
-	int	index;
-
-	index = 0;
-	while (str[index] != '\0')
+	while (*str != '\0')
 	{
-		if (!(str[index] >= 'a' && str[index] <= 'z'))
-		{	
+		if (!(*str >= 'a' && *str <= 'z'))
 			return (0);
-		}
-		index++;
+		str++;
 	}
 	return (1);
 }

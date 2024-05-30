@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 15:56:26 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/16 18:21:42 by maxklb           ###   ########.fr       */
+/*   Created: 2023/08/07 17:47:30 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/07 17:50:22 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strlowcase(char *str)
 	while (str[index] != '\0')
 	{
 		if (str[index] >= 'A' && str[index] <= 'Z')
-		{
 			str[index] = str[index] + 32;
-		}
 		index++;
 	}
 	return (str);

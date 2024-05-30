@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 13:42:34 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/15 13:13:25 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/07 15:09:57 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/09 15:54:26 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,11 @@
 
 int	ft_str_is_uppercase(char *str)
 {
-	int	index;
-
-	index = 0;
-	while (str[index] != '\0')
+	while (*str != '\0')
 	{
-		if (!(str[index] >= 'A' && str[index] <= 'Z'))
-		{
+		if (!(*str >= 'A' && *str <= 'Z'))
 			return (0);
-		}
-		index++;
+		str++;
 	}
 	return (1);
 }

@@ -3,28 +3,50 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/16 14:01:52 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/17 19:53:10 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/09 15:17:20 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/14 17:08:27 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+int	ft_strlen(char *str)
+{
+	int	index;
+
+	index = 0;
+	while (str[index] != '\0')
+		index++;
+	return (index);
+}
 
 char	*ft_strcat(char *dest, char *src)
 {
-	char	*x;
+	int	index;
+	int	dest_len;
 
-	x = dest;
-	while (*x != '\0')
-		x++;
-	while (*src != '\0')
+	dest_len = ft_strlen(dest);
+	index = 0;
+	while (src[index] != '\0')
 	{
-		*x = *(unsigned char *)src;
-		x++;
-		src++;
+		dest[dest_len + index] = src[index];
+		index++;
 	}
-	*x = '\0';
+	dest[dest_len + index] = '\0';
 	return (dest);
 }
+
+/*
+#include <string.h>
+#include <stdio.h>
+
+int	main(void)
+{
+	char s1[10] = "test1";
+	char s2[] = "ok";
+	char s3[10] = "test1";
+	char s4[] = "ok";
+
+	printf("%s:%s\n", ft_strcat(s1, s2), strcat(s3, s4));
+	printf("%s\n", strcmp(s1, s3) == 0 && strcmp(s2, s4) == 0 ? "Success" : "Fail");
+}*/
