@@ -5,7 +5,7 @@ Welcome to my Github repository documenting everything I did during my "Piscine"
 Repository structure :
 
 <pre>
-📁 piscine
+📁 Piscine42
 ├── 📁 Shell00
 │   ├── ex00
 │   ├── ex01
@@ -20,3 +20,19 @@ Repository structure :
 │   └── ...
 └── ...
 </pre>
+
+Each folder represents a "Day" or a "Rush". Inside each folder, you'll find subfolders for each exercise (exXX).
+
+## Highlights
+
+Shell projects : Basic commands, file management, and automation.
+C projects : From the basics of variables and loops to more complex concepts like memory management.
+Rushes projects : Collaborated with random peers on projects and code reviews
+
+## How to use this repository
+
+Feel free to browse through the folders and files to see my solutions and projects.
+Each exercise is contained within its respective folder, with accompanying README files to explain what I did.
+
+
+## THANK YOU FOR VISITING MY REPOSITORY !!
