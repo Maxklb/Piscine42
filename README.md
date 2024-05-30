@@ -35,4 +35,4 @@ Feel free to browse through the folders and files to see my solutions and projec
 Each exercise is contained within its respective folder, with accompanying README files to explain what I did.
 
 
-## THANK YOU FOR VISITING MY REPOSITORY !!
+## Thank you for visiting my repository !!
