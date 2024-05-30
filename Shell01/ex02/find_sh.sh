@@ -1,1 +1,1 @@
-find -name "*.sh"  -printf '%f\n' | sed -e 's/\.sh$//'
+find -name "*.sh" -printf '%f\n' | sed -e 's/\.sh$//'

@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_aff.c                                           :+:      :+:    :+:   */
+/*   ft_pars.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mamahtal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 17:57:27 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/17 20:42:21 by sadorlin         ###   ########.fr       */
+/*   Created: 2023/08/19 15:59:38 by mamahtal          #+#    #+#             */
+/*   Updated: 2023/08/20 23:31:54 by mamahtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft.h"
 
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
-
-void	ft_aff(int str[4][4])
-{
-	int	index;
-	int	j;
+void	ft_pars(char *str, char *path)
+{	
+	char	**tab;
+	int		index;
 
 	index = 0;
-	while (index < 4)
+	tab = ft_read(path);
+	if (ft_atoi(str) < 20)
 	{
-		j = 0;
-		while (j < 4)
-		{
-			ft_putchar(str[index][j] + '0');
-			ft_putchar(' ');
-			j++;
-		}
-		index++;
-		ft_putchar('\n');
+		index = strindex(tab, str);
+		ft_put_str(tab, index);
 	}
+	ft_tabkiller(tab);
 }

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush.h                                             :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadorlin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mamahtal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 20:43:15 by sadorlin          #+#    #+#             */
-/*   Updated: 2022/07/17 20:43:22 by sadorlin         ###   ########.fr       */
+/*   Created: 2023/08/19 14:30:13 by mamahtal          #+#    #+#             */
+/*   Updated: 2023/08/20 23:30:03 by mamahtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RUSH_H
-# define RUSH_H
+#include "ft.h"
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdlib.h>
-
-char	**find_all_value(int i, int val, char **list);
-void	niveau(char *args, char **list);
-
-#endif
+int	main(int ac, char **av)
+{	
+	if (ac == 2 && ft_check_arg(av[1]))
+		ft_pars(av[1], "numbers.dict");
+	if (ac != 2 || !ft_check_arg(av[1]))
+		write(1, "Error", 5);
+	write(1, "\n", 1);
+	return (0);
+}

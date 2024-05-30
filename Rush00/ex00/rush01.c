@@ -1,16 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush04.c                                           :+:      :+:    :+:   */
+/*   rush01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadonair <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 12:40:35 by sadonair          #+#    #+#             */
-/*   Updated: 2022/07/10 11:05:53 by lletourn         ###   ########.fr       */
+/*   Created: 2023/08/05 17:43:01 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/06 15:33:51 by ylareo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c);
 
@@ -19,44 +17,44 @@ void	ft_write(int cl, int ln, int cl_max, int ln_max)
 	if (ln == 1)
 	{
 		if (cl == 1)
-			ft_putchar('A');
+			ft_putchar('/');
 		else if (cl > 1 && cl < cl_max)
-			ft_putchar('B');
+			ft_putchar('*');
 		else
-			ft_putchar('C');
+			ft_putchar('\\');
 	}
 	else if (ln == ln_max)
 	{
 		if (cl == 1)
-			ft_putchar('C');
+			ft_putchar('\\');
 		else if (cl > 1 && cl < cl_max)
-			ft_putchar('B');
+			ft_putchar('*');
 		else
-			ft_putchar('A');
+			ft_putchar('/');
 	}
 	else
 	{
 		if (cl == 1 || cl == cl_max)
-			ft_putchar('B');
+			ft_putchar('*');
 		else
 			ft_putchar(' ');
 	}
 }
 
-void	rush(int column, int lign)
+void	rush(int x, int y)
 {
 	int	l;
 	int	c;
 
-	if (column < 0 || lign < 0)
+	if (x < 0 || y < 0)
 		return ;
 	l = 1;
 	c = 1;
-	while (l <= lign)
+	while (l <= y)
 	{
-		while (c <= column)
+		while (c <= x)
 		{
-			ft_write(c, l, column, lign);
+			ft_write(c, l, x, y);
 			c++;
 		}
 		ft_putchar('\n');

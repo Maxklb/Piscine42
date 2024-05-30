@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sadonair <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 12:37:44 by sadonair          #+#    #+#             */
-/*   Updated: 2022/07/10 11:07:19 by lletourn         ###   ########.fr       */
+/*   Created: 2023/08/05 10:29:41 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/05 10:30:57 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int column, int lign);
+#include <unistd.h>
 
-int	main(void)
+void	ft_putchar(char c)
 {
-	rush(5, 5);
-	return (0);
+	write(1, &c, 1);
 }
