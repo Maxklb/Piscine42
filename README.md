@@ -4,6 +4,7 @@ Welcome to my Github repository documenting everything I did during my "Piscine"
 
 Repository structure :
 
+<pre>
 📁 piscine
 ├── 📁 Shell00
 │   ├── ex00
@@ -18,3 +19,4 @@ Repository structure :
 │   ├── ex01
 │   └── ...
 └── ...
+</pre>
