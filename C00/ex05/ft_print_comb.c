@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxklb <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 19:53:56 by maxklb            #+#    #+#             */
-/*   Updated: 2022/07/09 16:20:06 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/02 18:04:38 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/05 16:53:12 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_seq_char(char a, char b, char c)
+void	ft_print_list(char a, char b, char c)
 {
 	ft_putchar(a);
 	ft_putchar(b);
@@ -39,7 +39,7 @@ void	ft_print_comb(void)
 			c = b + 1;
 			while (c <= '9')
 			{
-				ft_print_seq_char(a, b, c);
+				ft_print_list(a, b, c);
 				if (!(a == '7' && b == '8' && c == '9'))
 				{
 					ft_putchar(',');

@@ -3,28 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxklb <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 19:17:43 by maxklb            #+#    #+#             */
-/*   Updated: 2022/07/09 16:14:50 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/02 15:54:22 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/02 15:56:55 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 void	ft_print_reverse_alphabet(void)
 {
-	char	c;
-
-	c = 'z';
-	while (c >= 'a')
-	{
-		ft_putchar (c);
-		c--;
-	}
+	write(1, "zyxwvutsrqponmlkjihgfedcba", 26);
 }

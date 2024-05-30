@@ -3,28 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/08 11:26:45 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/10 10:36:53 by maxklb           ###   ########.fr       */
+/*   Created: 2023/08/02 17:28:41 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/06 09:41:57 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 void	ft_print_numbers(void)
 {
-	char	c;
-
-	c = '0';
-	while (c <= '9')
-	{
-		ft_putchar(c);
-	c++;
-	}
+	write(1, "0123456789", 10);
 }

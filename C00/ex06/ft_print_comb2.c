@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkoch-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: makoch-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/08 11:54:51 by mkoch-le          #+#    #+#             */
-/*   Updated: 2022/07/09 16:22:14 by mkoch-le         ###   ########.fr       */
+/*   Created: 2023/08/03 13:48:28 by makoch-l          #+#    #+#             */
+/*   Updated: 2023/08/05 16:09:17 by makoch-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putchar( char c)
 {
 	write(1, &c, 1);
 }
@@ -33,23 +33,23 @@ void	init(int a, int b, int last)
 
 void	ft_print_comb2(void)
 {
-	int	e;
-	int	f;
+	int	c;
+	int	d;
 	int	last;
 
-	e = 0;
-	while (e < 100)
+	c = 0;
+	while (c < 100)
 	{
-		f = e + 1;
-		while (f < 100)
+		d = c + 1;
+		while (d < 100)
 		{
-			if (e == 98 && f == 99)
+			if (c == 98 && d == 99)
 				last = 1;
 			else
 				last = 0;
-			init(e, f, last);
-			f++;
+			init(c, d, last);
+			d++;
 		}
-		e++;
+		c++;
 	}
 }
